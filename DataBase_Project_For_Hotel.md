@@ -106,7 +106,7 @@ ALTER TABLE Clienti MODIFY Gen VARCHAR(10) NOT NULL;
 
 
 ### DML (Data Manipulation Language)
-@@ -44,40 +112,120 @@ The tables are connected in the following way:
+The tables are connected in the following way:
 In the testing process, this necessary data is identified in the Test Design phase and created in the Test Implementation phase. 
 
 Below you can find all the insert instructions that were created in the scope of this project:
