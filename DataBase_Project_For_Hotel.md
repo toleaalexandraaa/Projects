@@ -26,6 +26,8 @@ ProgramPersonal: Informații despre programul angajaților, inclusiv perioadele 
 ## Database Schema 
 
 You can find below the database schema that was generated through Reverse Engineer and which contains all the tables and the relationships between them.
+![Captură de ecran 2024-10-18 162950](https://github.com/user-attachments/assets/a9e6a932-daf4-44c5-b364-bd264177b950)
+
 
 The tables are connected in the following way:
 - Tabel Angajat is connected with tabela functie through a tip 1:N relationship which was implemented through Functie.FunctieID as a primary key and Angajat.FunctieID as a foreign key
