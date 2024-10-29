@@ -38,10 +38,12 @@ The tables are connected in the following way:
 ### DDL (Data Definition Language)
 
 The following instructions were written in the scope of CREATING the structure of the database (CREATE INSTRUCTIONS)
-
+```
 create database hotel;
 use hotel;
+```
 
+```
 CREATE TABLE Clienti (
     ClientID INT PRIMARY KEY AUTO_INCREMENT,
     Nume VARCHAR(50) NOT NULL,
@@ -94,7 +96,7 @@ CREATE TABLE ProgramPersonal (
     TipProgram VARCHAR(50),
     FOREIGN KEY (PersonalID) REFERENCES Personal(PersonalID)
 );
-
+```
 After the database and the tables have been created, a few ALTER instructions were written in order to update the structure of the database, as described below:
 
 ALTER TABLE Personal RENAME TO Angajat;
@@ -110,7 +112,7 @@ The tables are connected in the following way:
 In the testing process, this necessary data is identified in the Test Design phase and created in the Test Implementation phase. 
 
 Below you can find all the insert instructions that were created in the scope of this project:
-
+```
 INSERT INTO functie (FunctieID, Denumire, Salariu_Minim, Salariu_Maxim) 
 VALUES 
 (1, 'Manager', 10000, NULL),
@@ -150,9 +152,10 @@ VALUES
     (NULL, 1, '2024-10-01', '2024-10-15', 'Tura de zi', 'Concediu medical'),
     (NULL, 2, '2024-10-10', '2024-10-20', 'Tura de noapte', 'Concediu de odihnă');
     SELECT * FROM Concediu;
-
+```
 After the insert, in order to prepare the data to be better suited for the testing process, I updated some data in the following way:
 
+```
  UPDATE Angajat
 SET Salariu = 4000.00
 WHERE Nume = 'Dumitru' AND Prenume = 'Alexandru';
@@ -163,12 +166,13 @@ After the testing process, I deleted the data that was no longer relevant in ord
 DELETE FROM Concediu
 WHERE ProgramID = 1;
 SELECT * FROM Concediu;
-
+```
 
 ### DQL (Data Query Language)
 
 
 In order to simulate various scenarios that might happen in real life I created the following queries that would cover multiple potential real-life situations:
+```
 
 SELECT Nume, Prenume, Salariu 
 FROM Angajat
@@ -211,6 +215,7 @@ WHERE NOT Nume LIKE 'C%';
 
 SELECT * FROM Clienti
 WHERE Email LIKE '%gmail%' AND Telefon LIKE '07%';
+```
 
 ## Conclusions
 Proiectul ”HOTEL” a avut ca scop crearea unei baze de date complete și eficiente pentru gestionarea activităților unui hotel, acoperind aspecte precum managementul rezervărilor, alocarea personalului și monitorizarea programului de lucru. Prin implementarea tabelelor interconectate și utilizarea tehnicilor avansate de interogare SQL, am reușit să construiesc o soluție robustă pentru gestionarea datelor specifice unei unități hoteliere.
